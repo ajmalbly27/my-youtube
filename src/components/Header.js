@@ -2,13 +2,24 @@ import React from "react";
 
 import { IoIosMenu } from "react-icons/io";
 import { CiSearch } from "react-icons/ci";
+import { useDispatch } from "react-redux";
+import { toggleMenu } from "../utils/appSlice";
 
 const Header = () => {
+  const dispatch = useDispatch();
+
+  const toggleMenuHandler = () => {
+    dispatch(toggleMenu());
+  };
+
   return (
     <div className="h-[10.5vh] pl-7 pr-10 flex justify-between items-center shadow-lg">
       <div className="flex items-center justify-center">
         <div className="w-8 mr-2">
-          <IoIosMenu className="p-1 text-[34px] rounded-full cursor-pointer hover:bg-gray-200" />
+          <IoIosMenu
+            className="p-1 text-[34px] rounded-full cursor-pointer hover:bg-gray-200"
+            onClick={toggleMenuHandler}
+          />
         </div>
         <a href="/">
           <img
