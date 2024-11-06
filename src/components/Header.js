@@ -22,14 +22,16 @@ const Header = () => {
           />
         </div>
         <a href="/">
-          <img
-            className="h-16"
-            alt="youtube-logo"
-            src="https://cdn.mos.cms.futurecdn.net/8gzcr6RpGStvZFA2qRt4v6.jpg"
-          />
+          <div className="w-28">
+            <img
+              className="w-full h-auto"
+              alt="youtube-logo"
+              src="https://cdn.mos.cms.futurecdn.net/8gzcr6RpGStvZFA2qRt4v6.jpg"
+            />
+          </div>
         </a>
       </div>
-      <div className="w-6/12 text-center flex justify-center">
+      <div className="w-6/12 flex justify-center">
         <input
           type="text"
           placeholder="Search"
