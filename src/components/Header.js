@@ -13,7 +13,7 @@ const Header = () => {
   };
 
   return (
-    <div className="h-[10.5vh] pl-7 pr-10 flex justify-between items-center shadow-lg">
+    <div className="h-[10.5vh] min-h-[50px] pl-7 pr-10 flex justify-between items-center bg-white shadow-lg sticky top-0">
       <div className="flex items-center justify-center">
         <div className="w-8 mr-2">
           <IoIosMenu
@@ -24,7 +24,7 @@ const Header = () => {
         <a href="/">
           <div className="w-28">
             <img
-              className="w-full h-[9.5vh]"
+              className="w-full h-[9.5vh] min-h-12"
               alt="youtube-logo"
               src="https://cdn.mos.cms.futurecdn.net/8gzcr6RpGStvZFA2qRt4v6.jpg"
             />

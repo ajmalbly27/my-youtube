@@ -18,7 +18,7 @@ const VideoContainer = () => {
   };
 
   return (
-    <div className="py-5 flex flex-wrap h-[89.5vh] overflow-y-hidden hover:overflow-y-auto">
+    <div className="py-5 flex flex-wrap">
       {videos.map((video) => (
         <Link key={video.id} to={"watch?v=" + video?.id} className="mr-5 mb-6">
           <VideoCard info={video} />

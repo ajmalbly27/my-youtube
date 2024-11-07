@@ -29,8 +29,12 @@ function App() {
     <Provider store={store}>
       <div>
         <Header />
-        <RouterProvider router={appRouter} />
-        {/* <Body /> */}
+        <RouterProvider
+          router={appRouter}
+          future={{
+            v7_startTransition: true,
+          }}
+        />
       </div>
     </Provider>
   );
