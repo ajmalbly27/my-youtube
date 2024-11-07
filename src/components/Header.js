@@ -24,7 +24,7 @@ const Header = () => {
         <a href="/">
           <div className="w-28">
             <img
-              className="w-full h-auto"
+              className="w-full h-[9.5vh]"
               alt="youtube-logo"
               src="https://cdn.mos.cms.futurecdn.net/8gzcr6RpGStvZFA2qRt4v6.jpg"
             />

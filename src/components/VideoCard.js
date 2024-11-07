@@ -5,11 +5,11 @@ const VideoCard = ({ info }) => {
   const { channelTitle, title, thumbnails } = snippet;
 
   return (
-    <div className="w-[320px] mr-5">
+    <div className="w-[320px]">
       <img
         src={thumbnails.medium.url}
         alt="thumbnail"
-        className="mr-3 mt-3 cursor-pointer rounded-xl"
+        className="cursor-pointer rounded-xl"
       />
       <ul>
         <li className="text-base font-semibold">{title}</li>
