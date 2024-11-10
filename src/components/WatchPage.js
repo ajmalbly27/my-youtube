@@ -15,10 +15,11 @@ const WatchPage = () => {
   }, []);
 
   return (
-    <div>
+    <div className="mx-9 my-4">
       <iframe
-        width="800"
-        height="400"
+        className=" rounded-xl"
+        width="850"
+        height="475"
         src={"https://www.youtube.com/embed/" + id}
         title="YouTube video player"
         frameBorder="0"

@@ -20,7 +20,7 @@ const SideBar = () => {
   if (!isMenuOpen) return null;
 
   return (
-    <div className="w-[21%] h-[89.5vh] p-5 overflow-y-hidden hover:overflow-y-auto">
+    <div className="w-1/6 h-[89.5vh] p-5 bg-white overflow-y-hidden hover:overflow-y-auto fixed left-0">
       <ul className="pb-4 border-b-[1px]">
         <li className="flex items-center px-4 py-2 bg-gray-200 rounded-lg">
           <IoMdHome className="mr-3 text-2xl" />

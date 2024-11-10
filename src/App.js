@@ -27,14 +27,9 @@ const appRouter = createBrowserRouter([
 function App() {
   return (
     <Provider store={store}>
-      <div>
+      <div className="w-full h-full">
         <Header />
-        <RouterProvider
-          router={appRouter}
-          future={{
-            v7_startTransition: true,
-          }}
-        />
+        <RouterProvider router={appRouter} />
       </div>
     </Provider>
   );
