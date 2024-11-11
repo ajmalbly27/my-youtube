@@ -80,8 +80,42 @@ const WatchPage = () => {
           </div>
         )}
 
-        <div className="my-5 p-2 rounded-xl bg-gray-200">
-          {videoInfo?.snippet?.description}
+        <div className="my-5 p-2 text-[15px] font-[450] rounded-xl bg-gray-200">
+          {videoInfo?.snippet?.description
+            .split("\n\n")
+            .map((paragraph, index) => (
+              <div key={index}>
+                {paragraph.split("\n").map((line, lineIndex) => (
+                  <React.Fragment key={lineIndex}>
+                    {line
+                      .split(/(https?:\/\/[^\s]+|#[\w]+)/g)
+                      .map((segment, index) => {
+                        if (segment.match(/^https?:\/\//)) {
+                          return (
+                            <a
+                              key={index}
+                              href={segment}
+                              className="text-blue-500"
+                            >
+                              {segment}
+                            </a>
+                          );
+                        } else if (segment.match(/^#/)) {
+                          return (
+                            <span key={index} className="text-blue-500">
+                              {segment}
+                            </span>
+                          );
+                        } else {
+                          return segment;
+                        }
+                      })}
+                    <br />
+                  </React.Fragment>
+                ))}
+                <br />
+              </div>
+            ))}
         </div>
       </div>
     </div>

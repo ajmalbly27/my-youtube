@@ -6,7 +6,7 @@ const VideoCard = ({ info }) => {
   const { channelTitle, title, thumbnails } = snippet;
 
   return (
-    <div className="w-[23.4vw] min-h-72 h-[49vh] mr-7 mb-1 rounded-xl">
+    <div className="w-[23.4vw] min-h-72 mr-7 mb-3 rounded-xl">
       <Link to={"watch?v=" + info?.id}>
         <div className="w-full">
           <img
