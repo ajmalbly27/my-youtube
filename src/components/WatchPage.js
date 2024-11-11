@@ -79,6 +79,10 @@ const WatchPage = () => {
             </ul>
           </div>
         )}
+
+        <div className="my-5 p-2 rounded-xl bg-gray-200">
+          {videoInfo?.snippet?.description}
+        </div>
       </div>
     </div>
   );
