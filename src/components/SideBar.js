@@ -12,6 +12,7 @@ import { TfiCup } from "react-icons/tfi";
 import { GoLightBulb } from "react-icons/go";
 import { MdOutlinePodcasts } from "react-icons/md";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const SideBar = () => {
   const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
@@ -22,10 +23,12 @@ const SideBar = () => {
   return (
     <div className="w-1/6 h-[89.5vh] p-5 bg-white overflow-y-hidden hover:overflow-y-auto fixed left-0">
       <ul className="pb-4 border-b-[1px]">
-        <li className="flex items-center px-4 py-2 bg-gray-200 rounded-lg">
-          <IoMdHome className="mr-3 text-2xl" />
-          Home
-        </li>
+        <Link to="/">
+          <li className="flex items-center px-4 py-2 bg-gray-200 rounded-lg">
+            <IoMdHome className="mr-3 text-2xl" />
+            Home
+          </li>
+        </Link>
         <li className="flex items-center px-4 py-2 rounded-lg hover:bg-gray-200">
           <SiYoutubeshorts className="mr-3 text-2xl" />
           Shorts

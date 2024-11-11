@@ -21,7 +21,7 @@ const VideoContainer = () => {
     <div className="py-5 flex flex-wrap">
       {videos.map((video) => (
         // <Link key={video.id} to={"watch?v=" + video?.id} className="mr-7 mb-1">
-        <VideoCard info={video} />
+        <VideoCard key={video.id} info={video} />
         // </Link>
       ))}
     </div>
