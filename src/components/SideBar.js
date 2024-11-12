@@ -29,58 +29,58 @@ const SideBar = () => {
             Home
           </li>
         </Link>
-        <li className="flex items-center px-4 py-2 rounded-lg hover:bg-gray-200">
+        <li className="flex items-center px-4 py-2 rounded-lg hover:bg-gray-200 cursor-pointer">
           <SiYoutubeshorts className="mr-3 text-2xl" />
           Shorts
         </li>
-        <li className="flex items-center px-4 py-2 rounded-lg hover:bg-gray-200">
+        <li className="flex items-center px-4 py-2 rounded-lg hover:bg-gray-200 cursor-pointer">
           <MdOutlineSubscriptions className="mr-3 text-2xl" />
           Subscriptions
         </li>
       </ul>
       <h1 className="font-semibold px-4 pt-4 pb-1">Explore</h1>
       <ul className="pb-4 border-b-[1px] text-[15px]">
-        <li className="flex items-center px-4 py-2 rounded-lg hover:bg-gray-200">
+        <li className="flex items-center px-4 py-2 rounded-lg hover:bg-gray-200 cursor-pointer">
           <FaFireAlt className="mr-3 text-xl" />
           Trending
         </li>
-        <li className="flex items-center px-4 py-2 rounded-lg hover:bg-gray-200">
+        <li className="flex items-center px-4 py-2 rounded-lg hover:bg-gray-200 cursor-pointer">
           <AiOutlineShopping className="mr-3 text-2xl" />
           Shopping
         </li>
-        <li className="flex items-center px-4 py-2 rounded-lg hover:bg-gray-200">
+        <li className="flex items-center px-4 py-2 rounded-lg hover:bg-gray-200 cursor-pointer">
           <CiMusicNote1 className="mr-3 text-2xl" />
           Music
         </li>
-        <li className="flex items-center px-4 py-2 rounded-lg hover:bg-gray-200">
+        <li className="flex items-center px-4 py-2 rounded-lg hover:bg-gray-200 cursor-pointer">
           <BiMoviePlay className="mr-3 text-2xl" />
           Movies
         </li>
-        <li className="flex items-center px-4 py-2 rounded-lg hover:bg-gray-200">
+        <li className="flex items-center px-4 py-2 rounded-lg hover:bg-gray-200 cursor-pointer">
           <img
-            className="w-6 mr-3"
+            className="w-6 mr-3 "
             alt="live-icon"
             src="https://static-00.iconduck.com/assets.00/live-icon-512x376-swbqg3p5.png"
           />
           Live
         </li>
-        <li className="flex items-center px-4 py-2 rounded-lg hover:bg-gray-200">
+        <li className="flex items-center px-4 py-2 rounded-lg hover:bg-gray-200 cursor-pointer">
           <SiYoutubegaming className="mr-3 text-2xl" />
           Gaming
         </li>
-        <li className="flex items-center px-4 py-2 rounded-lg hover:bg-gray-200">
+        <li className="flex items-center px-4 py-2 rounded-lg hover:bg-gray-200 cursor-pointer">
           <FaRegNewspaper className="mr-3 text-2xl" />
           News
         </li>
-        <li className="flex items-center px-4 py-2 rounded-lg hover:bg-gray-200">
+        <li className="flex items-center px-4 py-2 rounded-lg hover:bg-gray-200 cursor-pointer">
           <TfiCup className="mr-3 text-xl" />
           Sports
         </li>
-        <li className="flex items-center px-4 py-2 rounded-lg hover:bg-gray-200">
+        <li className="flex items-center px-4 py-2 rounded-lg hover:bg-gray-200 cursor-pointer">
           <GoLightBulb className="mr-3 text-2xl" />
           Courses
         </li>
-        <li className="flex items-center px-4 py-2 rounded-lg hover:bg-gray-200">
+        <li className="flex items-center px-4 py-2 rounded-lg hover:bg-gray-200 cursor-pointer">
           <img
             className="w-6 mr-3"
             alt="live-icon"
@@ -88,7 +88,7 @@ const SideBar = () => {
           />
           Fashion & Beauty
         </li>
-        <li className="flex items-center px-4 py-2 rounded-lg hover:bg-gray-200">
+        <li className="flex items-center px-4 py-2 rounded-lg hover:bg-gray-200 cursor-pointer">
           <MdOutlinePodcasts className="mr-3 text-2xl" />
           Podcasts
         </li>
