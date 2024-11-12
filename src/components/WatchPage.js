@@ -2,22 +2,16 @@ import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { closeMenu } from "../utils/appSlice";
 import { useSearchParams } from "react-router-dom";
+import VideoDescription from "./VideoDescription";
 
 const WatchPage = () => {
   const [videoInfo, setVideoInfo] = useState(null);
   const [channelInfo, setChannelInfo] = useState(null);
-  const [isDescOpen, setIsDescOpen] = useState(false);
 
   const [searchParams] = useSearchParams();
   const dispatch = useDispatch();
 
   const videoId = searchParams.get("v");
-
-  // const VIDEO_URL =
-  //   "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=" +
-  //   videoId +
-  //   "&key=" +
-  //   process.env.REACT_APP_YOUTUBE_API_KEY;
 
   const VIDEO_URL = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${videoId}&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`;
 
@@ -30,14 +24,6 @@ const WatchPage = () => {
     fetchVideoInfo();
     // eslint-disable-next-line
   }, []);
-
-  // const fetchVideoInfo = async () => {
-  //   const data = await fetch(VIDEO_URL);
-  //   const json = await data.json();
-  //   console.log(json.items[0]);
-  //   setVideoInfo(json.items[0]);
-  //   getChannelInfo(json.items[0].snippet.channelId);
-  // };
 
   const fetchVideoInfo = async () => {
     try {
@@ -61,13 +47,6 @@ const WatchPage = () => {
     } catch (error) {
       console.error("Error fetching channel info:", error);
     }
-  };
-
-  const maximizeDescription = () => {
-    setIsDescOpen(true);
-  };
-  const minimizeDescription = () => {
-    setIsDescOpen(false);
   };
 
   return (
@@ -112,86 +91,7 @@ const WatchPage = () => {
         )}
 
         {/* Video Description */}
-        <div
-          onClick={() => !isDescOpen && maximizeDescription()}
-          className={`${
-            !isDescOpen ? "h-32 cursor-pointer " : ""
-          } my-5 p-4 text-[15px] font-[450] rounded-xl bg-gray-200`}
-        >
-          {videoInfo && (
-            <div>
-              <span className="font-semibold">
-                {videoInfo.statistics.viewCount} views &nbsp;
-              </span>
-              <span className="font-semibold">
-                {videoInfo.snippet.publishedAt.split("").splice(0, 10)} &nbsp;
-              </span>
-              {videoInfo.snippet.tags &&
-                videoInfo.snippet.tags.splice(0, 3).map((tag, index) => (
-                  <span
-                    key={index}
-                    className="ml-1 font-semibold text-blue-600"
-                  >
-                    #{tag}
-                  </span>
-                ))}
-            </div>
-          )}
-          <div className={!isDescOpen && "line-clamp-3"}>
-            {videoInfo?.snippet?.description
-              .split("\n\n")
-              .map((paragraph, index) => (
-                <p key={index} className="mb-2">
-                  {paragraph.split("\n").map((line, lineIndex) => (
-                    <React.Fragment key={lineIndex}>
-                      {line
-                        .split(/(https?:\/\/[^\s]+|#[\w]+)/g)
-                        .map((segment, segmentIndex) => {
-                          if (segment.match(/^https?:\/\//)) {
-                            return (
-                              <a
-                                key={segmentIndex}
-                                href={segment}
-                                className="text-blue-500"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                              >
-                                {segment}
-                              </a>
-                            );
-                          } else if (segment.match(/^#/)) {
-                            return (
-                              <span
-                                key={segmentIndex}
-                                className="text-blue-500"
-                              >
-                                {segment}
-                              </span>
-                            );
-                          } else {
-                            return segment;
-                          }
-                        })}
-                      <br />
-                    </React.Fragment>
-                  ))}
-                  <br />
-                </p>
-              ))}
-          </div>
-          {isDescOpen && (
-            <button
-              // use stopPropagation method to avoid event bubbling
-              onClick={(e) => {
-                e.stopPropagation();
-                minimizeDescription();
-              }}
-              className="font-semibold"
-            >
-              Show less
-            </button>
-          )}
-        </div>
+        <VideoDescription videoInfo={videoInfo} />
       </article>
     </div>
   );
