@@ -3,7 +3,7 @@ import { FaCheckCircle } from "react-icons/fa";
 
 const SuggestedVideo = ({ relatedVideoInfo }) => {
   return (
-    <div className="h-28 mb-2 flex cursor-pointer">
+    <div className="min-h-28 mb-2 flex cursor-pointer 2xl:mb-5">
       <div className="w-[45%]">
         <img
           className="w-full rounded-lg hover:rounded-none"

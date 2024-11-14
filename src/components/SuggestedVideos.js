@@ -33,7 +33,7 @@ const SuggestedVideos = ({ videoInfo }) => {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-2/6 bg-blue-300">
       {relatedVideos.length > 0 &&
         relatedVideos.map((video) => (
           <SuggestedVideo key={video.id.videoId} relatedVideoInfo={video} />

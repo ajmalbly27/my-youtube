@@ -23,6 +23,10 @@ const WatchPage = () => {
   useEffect(() => {
     dispatch(closeMenu());
     fetchVideoInfo();
+
+    // Scroll to the top of the page when the component mounts
+    window.scrollTo(0, 0);
+
     // eslint-disable-next-line
   }, []);
 
@@ -51,14 +55,15 @@ const WatchPage = () => {
   };
 
   return (
-    <div className="w-full mx-9 my-4 flex">
-      <div className="w-[850px] mr-5">
+    <div className="w-full h-full mx-9 my-4 flex">
+      <div className="w-4/6 mr-5">
         {/* Video Player */}
         <iframe
           title="YouTube video player"
-          className=" rounded-xl"
-          width="850"
-          height="470"
+          // className="rounded-xl"
+          className="w-full aspect-video rounded-xl"
+          // width="850"
+          // height="470"
           src={"https://www.youtube.com/embed/" + videoId}
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
