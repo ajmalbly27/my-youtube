@@ -55,7 +55,7 @@ const WatchPage = () => {
   };
 
   return (
-    <div className="w-full h-full mx-9 my-4 flex">
+    <div className="w-full mx-9 my-4 flex">
       <div className="w-4/6 mr-5">
         {/* Video Player */}
         <iframe
