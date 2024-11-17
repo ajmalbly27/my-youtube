@@ -5,11 +5,17 @@ import { FaAngleLeft } from "react-icons/fa6";
 import { FaAngleRight } from "react-icons/fa6";
 
 const ButtonList = () => {
+  // Reference to the scrollable container
   const containerRef = useRef(null);
+
+  // State to track the currently selected button
   const [selectedButtonId, setSelectedButtonId] = useState(1);
+
+  // State to determine visibility of scroll buttons
   const [isLeftVisible, setIsLeftVisible] = useState(false);
   const [isRightVisible, setIsRightVisible] = useState(true);
 
+  // List of button items
   const list = [
     {
       name: "All",
@@ -93,23 +99,30 @@ const ButtonList = () => {
     },
   ];
 
+  // Handle button click to update selected button
   const handleButtonClick = (id) => {
     setSelectedButtonId(id);
   };
 
+  // Handle scroll event to toggle visibility of scroll buttons
   const handleScroll = () => {
     const { scrollLeft, scrollWidth, clientWidth } = containerRef.current;
 
+    // Show/hide left button based on scroll position
     setIsLeftVisible(scrollLeft > 0);
+
+    // Show/hide right button based on remaining scrollable width
     setIsRightVisible(scrollLeft < scrollWidth - clientWidth);
   };
 
+  // Scroll the container to the left
   const scrollLeft = () => {
     if (containerRef.current) {
       containerRef.current.scrollBy({ left: -400, behavior: "smooth" });
     }
   };
 
+  // Scroll the container to the right
   const scrollRight = () => {
     if (containerRef.current) {
       containerRef.current.scrollBy({ left: 400, behavior: "smooth" });
@@ -123,6 +136,7 @@ const ButtonList = () => {
         <button
           className="absolute -left-4 z-10 p-3 rounded-full bg-white text-gray-600 hover:bg-gray-200"
           onClick={scrollLeft}
+          aria-label="Scroll left"
         >
           <FaAngleLeft />
         </button>
@@ -151,6 +165,7 @@ const ButtonList = () => {
         <button
           className="absolute -right-4 z-10 p-3 rounded-full bg-white text-gray-600 hover:bg-gray-200"
           onClick={scrollRight}
+          aria-label="Scroll right"
         >
           <FaAngleRight />
         </button>

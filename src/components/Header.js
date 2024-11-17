@@ -13,7 +13,7 @@ const Header = () => {
   };
 
   return (
-    <div className="h-[10.5vh] min-h-12 pl-7 pr-10 flex justify-between items-center bg-white sticky top-0 z-20 md:px-4 lg:pl-7 lg:pr-10 2xl:h-[10.5vh] 2xl:min-h-14">
+    <div className="h-[10.5vh] min-h-12 pl-7 pr-10 flex justify-between items-center bg-white sticky top-0 z-20 md:px-4 lg:pl-7 lg:pr-10 xl:pl-5 2xl:h-[10.5vh] 2xl:min-h-14">
       <div className="flex items-center justify-center">
         <div className="w-8 mr-2">
           <IoIosMenu
