@@ -132,7 +132,7 @@ const ButtonList = () => {
       <div
         ref={containerRef}
         onScroll={handleScroll}
-        className={`absolute w-full flex overflow-x-hidden ${
+        className={`absolute w-full flex overflow-x-scroll scrollbar-hide ${
           isLeftVisible && "pl-8"
         } ${isRightVisible && "pr-6"} py-1 scroll-smooth`}
       >
