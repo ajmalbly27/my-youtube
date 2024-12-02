@@ -130,11 +130,11 @@ const ButtonList = () => {
   };
 
   return (
-    <div className="relative mt-4 mb-6 py-2 flex items-center">
+    <div className="relative mt-4 mb-6 py-2 flex items-center sm:mb-0 xl:mb-3">
       {/* Left Scroll Button */}
       {isLeftVisible && (
         <button
-          className="absolute -left-4 z-10 p-3 rounded-full bg-white text-gray-600 hover:bg-gray-200"
+          className="absolute -left-4 z-10 p-3 rounded-full bg-white text-gray-600 hover:bg-gray-200 sm:p-1.5 sm:-left-2.5"
           onClick={scrollLeft}
           aria-label="Scroll left"
         >
@@ -163,7 +163,7 @@ const ButtonList = () => {
       {/* Right Scroll Button */}
       {isRightVisible && (
         <button
-          className="absolute -right-4 z-10 p-3 rounded-full bg-white text-gray-600 hover:bg-gray-200"
+          className="absolute -right-4 z-10 p-3 rounded-full bg-white text-gray-600 hover:bg-gray-200 sm:p-1.5 sm:-right-2"
           onClick={scrollRight}
           aria-label="Scroll right"
         >

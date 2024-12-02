@@ -36,10 +36,13 @@ const FullSidebar = () => {
   ];
 
   return (
-    <div className="w-1/6 h-[89.5vh] px-5 py-0.5 overflow-y-hidden hover:overflow-y-auto fixed  left-0 bg-white 2xl:h-[89.5vh]">
+    <div className="h-[89.5vh] px-5 py-0.5 overflow-y-hidden hover:overflow-y-auto fixed left-0 bg-white sm:z-10 2xl:h-[89.5vh]">
       <SidebarSection items={mainItems} />
       <SidebarSection title="Explore" items={exploreItems} />
     </div>
+    // <div className="w-1/6 h-[89.5vh] px-5 py-0.5 overflow-y-hidden hover:overflow-y-auto fixed left-0 sm:w-1/4 sm:z-10 md:w-1/6 2xl:h-[89.5vh]">
+    //   Ajmal
+    // </div>
   );
 
   //   return (

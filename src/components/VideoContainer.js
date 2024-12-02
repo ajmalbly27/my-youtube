@@ -43,7 +43,7 @@ const VideoContainer = () => {
   }
 
   return (
-    <div className="py-5 flex flex-wrap">
+    <div className="py-5 flex flex-wrap sm:py-4">
       {videos.length > 0 ? (
         videos.map((video) => <VideoCard key={video.id} info={video} />)
       ) : (
