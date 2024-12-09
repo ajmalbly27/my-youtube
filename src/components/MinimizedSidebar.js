@@ -23,46 +23,46 @@ const MinimizedSidebar = () => {
   //   );
 
   return (
-    <div className="ml-1 fixed">
+    <div className="ml-1 bg-white fixed ts:hidden xs:hidden sm:block">
       <ul>
         {/* Home button */}
         <Link to="/">
           <li className="flex flex-col items-center px-0.5 py-4 hover:bg-gray-200 rounded-lg">
             <div>
-              <IoMdHome className="text-[27px] sm:text-xl lg:text-2xl" />
+              <IoMdHome className="text-[27px] xs:text-lg sm:text-xl lg:text-2xl" />
             </div>
-            <div className="text-xs sm:text-[11px] lg:text-sm">Home</div>
+            <div className="text-xs xs:text-[10px] sm:text-[11px] lg:text-sm">Home</div>
           </li>
         </Link>
         {/* Shorts button */}
         <li className="flex flex-col items-center  px-0.5 py-4 hover:bg-gray-200 rounded-lg">
           <div>
-            <SiYoutubeshorts className="text-xl sm:text-lg lg:text-xl" />
+            <SiYoutubeshorts className="text-xl xs:text-lg sm:text-lg lg:text-xl" />
           </div>
-          <div className="text-xs sm:text-[11px] lg:text-sm">Shorts</div>
+          <div className="text-xs  xs:text-[10px] sm:text-[11px] lg:text-sm">Shorts</div>
         </li>
         {/* Subscriptions button */}
         <li className="flex flex-col items-center px-0.5 py-4 hover:bg-gray-200 rounded-lg">
           <div>
-            <MdOutlineSubscriptions className="text-xl sm:text-lg lg:text-xl" />
+            <MdOutlineSubscriptions className="text-xl xs:text-lg sm:text-lg lg:text-xl" />
           </div>
-          <div className="text-[11px] sm:text-[10px] lg:text-xs">
+          <div className="text-[11px] xs:text-[9px] sm:text-[10px] lg:text-xs">
             Subscriptions
           </div>
         </li>
         {/* Profile button */}
         <li className="flex flex-col items-center px-0.5 py-4 hover:bg-gray-200 rounded-lg">
           <div>
-            <CgProfile className="text-2xl sm:text-xl lg:text-2xl" />
+            <CgProfile className="text-2xl xs:text-lg sm:text-xl lg:text-2xl" />
           </div>
           <div className="text-[12px] sm:text-[11px] lg:text-sm">You</div>
         </li>
         {/* Downloads button */}
         <li className="flex flex-col items-center px-0.5 py-4 hover:bg-gray-200 rounded-lg">
           <div>
-            <HiDownload className="text-2xl sm:text-xl lg:text-2xl" />
+            <HiDownload className="text-2xl xs:text-lg sm:text-xl lg:text-2xl" />
           </div>
-          <div className="text-[11px] sm:text-[10px] lg:text-sm">Downloads</div>
+          <div className="text-[11px] xs:text-[10px] sm:text-[10px] lg:text-sm">Downloads</div>
         </li>
       </ul>
     </div>

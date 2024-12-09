@@ -36,7 +36,7 @@ const FullSidebar = () => {
   ];
 
   return (
-    <div className="h-[89.5vh] px-5 py-0.5 overflow-y-hidden hover:overflow-y-auto fixed left-0 bg-white sm:z-10 2xl:h-[89.5vh]">
+    <div className="h-[89.5vh] px-5 py-0.5 overflow-y-hidden hover:overflow-y-auto fixed left-0 bg-white ts:z-10 sm:z-10 2xl:h-[89.5vh]">
       <SidebarSection items={mainItems} />
       <SidebarSection title="Explore" items={exploreItems} />
     </div>

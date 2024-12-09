@@ -134,7 +134,7 @@ const ButtonList = () => {
       {/* Left Scroll Button */}
       {isLeftVisible && (
         <button
-          className="absolute -left-4 z-10 p-3 rounded-full bg-white text-gray-600 hover:bg-gray-200 sm:p-1.5 sm:-left-2.5"
+          className="absolute -left-4 z-10 p-3 rounded-full bg-white text-gray-600 hover:bg-gray-200 ts:hidden sm:block sm:p-1.5 sm:-left-2.5"
           onClick={scrollLeft}
           aria-label="Scroll left"
         >
@@ -146,9 +146,8 @@ const ButtonList = () => {
       <div
         ref={containerRef}
         onScroll={handleScroll}
-        className={`absolute w-full flex overflow-x-scroll scrollbar-hide ${
-          isLeftVisible && "pl-8"
-        } ${isRightVisible && "pr-6"} py-1 scroll-smooth`}
+        className={`absolute w-full flex overflow-x-scroll scrollbar-hide ${isLeftVisible && "pl-8"
+          } ${isRightVisible && "pr-6"} py-1 scroll-smooth`}
       >
         {list.map((item) => (
           <Button
@@ -163,7 +162,7 @@ const ButtonList = () => {
       {/* Right Scroll Button */}
       {isRightVisible && (
         <button
-          className="absolute -right-4 z-10 p-3 rounded-full bg-white text-gray-600 hover:bg-gray-200 sm:p-1.5 sm:-right-2"
+          className="absolute -right-4 z-10 p-3 rounded-full bg-white text-gray-600 hover:bg-gray-200 ts:hidden sm:block sm:p-1.5 sm:-right-2"
           onClick={scrollRight}
           aria-label="Scroll right"
         >
